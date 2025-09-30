@@ -1,4 +1,4 @@
-import AlumniHeader from "@/components/alumni/Alumni";
+import AlumniHeader from "@/components/alumni/AlumniHeader";
 import Header from "@/components/Header";
 import AlumniMapping from "@/components/alumni/AlumniMapping";
 
