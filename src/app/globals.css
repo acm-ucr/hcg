@@ -1,1 +1,16 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-hcg-black: #1b1919;
+  --color-hcg-pastel-brown: #7a6a58;
+  --color-hcg-medium-brown: #81633e;
+  --color-hcg-gold: #bb8e57;
+  --color-hcg-white: #ffffff;
+  --color-hcg-gray: #eaeaee;
+
+  --font-hcg-main: "Roboto", sans-serif;
+  --font-hcg-alt: "Inter", sans-serif;
+}
