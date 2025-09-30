@@ -9,7 +9,7 @@ const Board = () => {
       <Header />
       <BoardMapping />
     </div>
-  )
+  );
 };
 
 export default Board;

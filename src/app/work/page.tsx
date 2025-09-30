@@ -6,14 +6,14 @@ import ContactUs from "@/components/work/ContactUs";
 
 const Work = () => {
   return (
-  <div>
-    <ClientWork />
-    <OurServices />
-    <Clients />
-    <Solutions />
-    <ContactUs />
-  </div>
-  )
+    <div>
+      <ClientWork />
+      <OurServices />
+      <Clients />
+      <Solutions />
+      <ContactUs />
+    </div>
+  );
 };
 
 export default Work;
