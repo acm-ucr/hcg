@@ -14,6 +14,7 @@ const Home = () => {
       <Clients />
       <MailingList /> */}
       <Example text1="Adjust" text2="These" text3="Props" />
+      Hello World
     </div>
   );
 };
