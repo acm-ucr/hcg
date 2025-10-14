@@ -1,5 +1,5 @@
-import ClientWork from "@/components/work/ClientWork";
-import OurServices from "@/components/work/OurServices";
+import Header from "@/components/Header";
+import InfoSection from "@/components/InfoSection";
 import Clients from "@/components/work/Clients";
 import Solutions from "@/components/work/Solutions";
 import ContactUs from "@/components/work/ContactUs";
@@ -7,8 +7,8 @@ import ContactUs from "@/components/work/ContactUs";
 const Work = () => {
   return (
     <div>
-      <ClientWork />
-      <OurServices />
+      <Header />
+      <InfoSection />
       <Clients />
       <Solutions />
       <ContactUs />
