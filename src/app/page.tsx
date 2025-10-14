@@ -1,19 +1,19 @@
-// import AboutUs from "@/components/home/AboutUs";
-// import OurTeam from "@/components/home/OurTeam";
-// import Carousel from "@/components/home/LogoCarousel";
-// import Clients from "@/components/home/Clients";
-// import MailingList from "@/components/home/MailingList";
-import Example from "@/components/Example";
+import LandingHeader from "@/components/home/LandingHeader";
+import InfoSection from "@/components/InfoSection";
+import OurTeam from "@/components/home/OurTeam";
+import Carousel from "@/components/home/LogoCarousel";
+import Clients from "@/components/home/Clients";
+import MailingList from "@/components/home/MailingList";
 
 const Home = () => {
   return (
     <div>
-      {/* <AboutUs />
+      <LandingHeader />
+      <InfoSection />
       <OurTeam />
       <Carousel />
       <Clients />
-      <MailingList /> */}
-      <Example text1="Adjust" text2="These" text3="Props" />
+      <MailingList />
     </div>
   );
 };
