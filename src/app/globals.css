@@ -13,3 +13,12 @@
   --font-hcg-main: "Roboto", sans-serif;
   --font-hcg-alt: "Inter", sans-serif;
 }
+
+.footer-gradient {
+  background-image: linear-gradient(
+    to right,
+    #bb8e57 0%,
+    #5e472c 35%,
+    #000000 100%
+  );
+}
