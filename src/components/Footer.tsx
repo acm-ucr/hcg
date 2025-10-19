@@ -4,7 +4,7 @@ import { footerLinks } from "@/data/FooterLinks";
 
 const Footer = () => {
   return (
-    <div className="footer-gradient flex items-end justify-between bg-gradient-to-r px-6 py-4 font-hcg-alt">
+    <div className="footer-gradient font-hcg-alt flex items-end justify-between bg-gradient-to-r px-6 py-4">
       <div className="text-hcg-white flex flex-col p-6">
         <div>Highlander Consulting Group</div>
         <hr className="bg-hcg-white my-2 h-0.5 w-3/4"></hr>
