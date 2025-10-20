@@ -1,14 +1,20 @@
-import Image from "next/image";
-import StaticImageData from "@/public/work/clientWorkBG.webp";
+import Image, { StaticImageData } from "next/image";
 
-const Header = () => {
+interface HeaderProps {
+  title: string;
+  headerPicture: StaticImageData;
+}
+
+const Header = ({ title, headerPicture }: HeaderProps) => {
   return (
-    <div>
-      <Image src={StaticImageData} alt="General Header" />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="w-1/2 p-5 text-center text-4xl text-white">
-          Meet the Team
-        </h1>
+    <div className="flex">
+      <Image
+        src={headerPicture}
+        alt="General Header"
+        className="h-[75vh] opacity-60"
+      />
+      <div className="absolute top-[35vh] w-full justify-center p-5 text-center text-5xl font-medium text-white opacity-100">
+        {title}
       </div>
     </div>
   );
