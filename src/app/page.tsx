@@ -5,11 +5,18 @@ import Carousel from "@/components/home/LogoCarousel";
 import Clients from "@/components/home/Clients";
 import MailingList from "@/components/home/MailingList";
 
+import AboutUsImage from "@/public/about/aboutUs.webp";
+
 const Home = () => {
   return (
     <div>
       <LandingHeader />
-      <InfoSection />
+      <InfoSection
+        title="About Us"
+        text="HCG is the premier student-run consulting group at the University of California, Riverside, committed to nurturing students' professional growth by offering hands-on opportunities to collaborate directly with diverse businesses. Our practical approach enriches our members with invaluable experience in consulting and strategic management, empowering them to excel in the business world."
+        image={AboutUsImage}
+        imageAlt="About Us"
+      />
       <OurTeam />
       <Carousel />
       <Clients />
