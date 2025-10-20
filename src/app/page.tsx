@@ -4,7 +4,6 @@ import OurTeam from "@/components/home/OurTeam";
 import Carousel from "@/components/home/LogoCarousel";
 import Clients from "@/components/home/Clients";
 import MailingList from "@/components/home/MailingList";
-import Button from "@/components/Button";
 
 const Home = () => {
   return (
@@ -15,7 +14,6 @@ const Home = () => {
       <Carousel />
       <Clients />
       <MailingList />
-      <Button text="Back to Home" href="hcg-website/src/app/page.tsx" />
     </div>
   );
 };
