@@ -7,16 +7,11 @@ interface SolutionCardProps {
 
 const SolutionCard = ({ cardTitle, cardText, imageSrc }: SolutionCardProps) => {
   return (
-    <div className="max-w-lg rounded-lg bg-[#bfa57f] p-5">
-      <div className="flex flex-col items-center space-y-10 rounded-lg border-3 border-white p-5 text-center text-white">
-        <Image
-          src={imageSrc}
-          alt={"Image of " + cardTitle}
-          width={60}
-          height={60}
-        />
-        <h1 className="text-3xl font-bold">{cardTitle}</h1>
-        <p className="mb-5 text-xl">{cardText}</p>
+    <div className="bg-hcg-pastel-brown-secondary w-1/4 rounded-lg p-5">
+      <div className="flex flex-col items-center space-y-8 rounded-lg border-3 border-white p-5 text-center text-white">
+        <Image src={imageSrc} alt={"Image of " + cardTitle} />
+        <div className="text-xl font-bold">{cardTitle}</div>
+        <p className="text-md mb-5">{cardText}</p>
       </div>
     </div>
   );
