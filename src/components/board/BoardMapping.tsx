@@ -1,5 +1,5 @@
 import BoardCard from "./BoardCard";
-import Alex from "@/public/board/AlexSin.webp";
+import Alex from "@/public/board/AramNarang.webp";
 
 const BoardMapping = () => {
   return (
@@ -8,8 +8,7 @@ const BoardMapping = () => {
         name="Aram Narang"
         role="CO-PRESIDENT"
         image={Alex}
-        linkedin="https: www.linkedin.com/in/aram-narang"
-        image1={Alex}
+        linkedin="https://www.linkedin.com/in/aram-narang/"
       />
     </div>
   );
