@@ -2,18 +2,12 @@ import Image from "next/image";
 import StaticImageData from "@/public/work/clientWorkBG.webp";
 
 const Header = () => {
-  const textStyle = {
-    position: "absolute",
-    top: "75%",
-    left: "36.5%",
-    color: "white",
-    fontSize: "35pt",
-  };
-
   return (
     <div>
-      <Image src={StaticImageData} alt="General Header"></Image>
-      <div style={textStyle}>Meet the Team</div>
+      <Image src={StaticImageData} alt="General Header" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <h1 className="text-white w-1/2 p-5 text-center text-4xl">Meet the Team</h1>
+      </div>
     </div>
   );
 };
