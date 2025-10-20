@@ -1,9 +1,4 @@
-const Example = (props: {
-  text1: string;
-  text2: string;
-  text3: string;
-  text4: string;
-}) => {
+const Example = (props: { text1: string; text2: string; text3: string }) => {
   return (
     <div className="bg-hcg-gold flex w-2/3 flex-col items-center gap-5 justify-self-center rounded-md p-8">
       <div className="bg-hcg-medium-brown w-full p-5 text-center">
