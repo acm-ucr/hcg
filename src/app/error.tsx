@@ -1,7 +1,8 @@
 "use client";
+import ErrorMessage from "@/components/ErrorMessage";
 
 const Error = () => {
-  return <div>Error</div>;
+  return <ErrorMessage />;
 };
 
 export default Error;
