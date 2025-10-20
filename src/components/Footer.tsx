@@ -1,14 +1,20 @@
-import React from "react";
 import Link from "next/link";
 import { footerLinks } from "@/data/FooterLinks";
 
 const Footer = () => {
   return (
-    <div className="footer-gradient font-hcg-alt flex items-end justify-between bg-gradient-to-r px-6 py-4">
+    <div
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, #bb8e57 0%, #5e472c 35%, #000000 100%)",
+      }}
+      className="flex items-end justify-between px-6 py-4"
+    >
       <div className="text-hcg-white flex flex-col p-6">
-        <div>Highlander Consulting Group</div>
-        <hr className="bg-hcg-white my-2 h-0.5 w-3/4"></hr>
-        <div className="space-y-3">
+        <div className="w-fit border-b-2 border-white pb-2">
+          Highlander Consulting Group
+        </div>
+        <div className="space-y-3 pt-2">
           <div>900 University Ave, Riverside, CA 92521</div>
           <div>Est. 2022</div>
         </div>
