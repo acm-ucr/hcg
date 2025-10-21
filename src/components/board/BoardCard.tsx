@@ -16,7 +16,7 @@ const BoardCard = ({ name, role, image, linkedin }: BoardCardProps) => {
 
       <div className="text-center text-xl font-semibold">{name}</div>
 
-      <div className="mb-4 text-center text-gray-600">{role}</div>
+      <div className="text-hcg-dark-gray mb-4 text-center">{role}</div>
 
       <Link href={linkedin} target="_blank">
         <FaLinkedin className="text-hcg-gold h-8 w-8" />
