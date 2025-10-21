@@ -4,11 +4,8 @@ import { footerLinks } from "@/data/FooterLinks";
 const Footer = () => {
   return (
     <div
-      style={{
-        backgroundImage:
-          "linear-gradient(to right, #bb8e57 0%, #5e472c 35%, #000000 100%)",
-      }}
-      className="flex items-end justify-between px-6 py-4"
+      
+      className="from-hcg-black to-hcg-gold bg-linear-to-r flex items-end justify-between px-6 py-4"
     >
       <div className="text-hcg-white flex flex-col p-6">
         <div className="w-fit border-b-2 border-white pb-2">
