@@ -1,16 +1,20 @@
-import LandingPageLogo from "@/public/mainLogo.webp";
+import LandingPageLogo from "@/public/mainLogo.png";
 import Image from "next/image";
 
 const LandingHeader = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="relative flex h-[75vh] w-full flex-col items-center justify-center">
       <Image
         src={LandingPageLogo}
-        alt="Higherlander Consulting Group Club Members"
+        alt="General Header"
+        fill
+        className="object-cover opacity-80"
+        priority
       />
-      <div className="text-hcg-white absolute content-center text-center">
-        <div className="text-3xl font-bold">Highlander Consulting Group</div>
-        <div>{`UC Riverside's Premier Consulting Organization`}</div>
+
+      <div className="text-hcg-white absolute content-center text-center opacity-100">
+        <div className="text-5xl font-bold">Highlander Consulting Group</div>
+        <div>UC Riverside's Premier Consulting Organization</div>
       </div>
     </div>
   );
