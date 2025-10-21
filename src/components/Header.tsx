@@ -7,13 +7,15 @@ interface HeaderProps {
 
 const Header = ({ title, headerPicture }: HeaderProps) => {
   return (
-    <div className="flex">
+    <div className="relative h-[50vh] w-full">
       <Image
         src={headerPicture}
         alt="General Header"
-        className="h-[75vh] opacity-60"
+        fill
+        className="object-cover opacity-60"
+        priority
       />
-      <div className="absolute top-[35vh] w-full justify-center p-5 text-center text-5xl font-medium text-white opacity-100">
+      <div className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-5xl font-medium text-white">
         {title}
       </div>
     </div>
