@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import InfoSection from "@/components/InfoSection";
 import Clients from "@/components/work/Clients";
 import Solutions from "@/components/work/Solutions";
-import ContactUs from "@/components/work/ContactUs";
+import ContactUs from "@/components/ContactUs";
 
 import OurServicesImage from "@/public/work/ourServices.webp";
 import workHeader from "@/public/work/clientWorkBG.webp";
