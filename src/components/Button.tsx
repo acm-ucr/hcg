@@ -9,7 +9,7 @@ const Button = ({ text, href }: ButtonProps) => {
   return (
     <Link
       href={href}
-      className="bg-hcg-gold text-hcg-white inline-block rounded-xl p-2 text-xl"
+      className="bg-hcg-gold text-hcg-white inline-block rounded-md px-4 py-2 text-sm font-thin"
     >
       {text}
     </Link>
