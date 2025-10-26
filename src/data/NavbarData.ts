@@ -1,8 +1,8 @@
-interface navBarInterface {
+interface NavBarInterface {
   name: string;
   link: string;
 }
-const navbarLinks: navBarInterface[] = [
+const navbarLinks: NavBarInterface[] = [
   {
     name: "Home",
     link: "/",
