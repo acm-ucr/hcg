@@ -6,7 +6,7 @@ export interface AlumniCardProps {
   name: string;
   role: Uppercase<string>;
   image: StaticImageData;
-  currentOccupation: string;
+  currentOccupation?: string;
   linkedin: string;
 }
 
