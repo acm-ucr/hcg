@@ -1,10 +1,16 @@
-// Map over Solution Data
-
 import Trend from "@/public/work/solutions/trend.webp";
 import Puzzle from "@/public/work/solutions/puzzle.webp";
 import Gear from "@/public/work/solutions/gear.webp";
 
-export const SolutionsInfo = [
+import { StaticImageData } from "next/image";
+
+interface SolutionInfo {
+  cardTitle: string;
+  cardText: string;
+  imageSrc: StaticImageData;
+}
+
+export const solutionsInfos: SolutionInfo[] = [
   {
     cardTitle: "MARKET INTELLIGENCE",
     cardText:
