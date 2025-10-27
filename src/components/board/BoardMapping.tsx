@@ -1,15 +1,18 @@
-import BoardCard from "./BoardCard";
-import Alex from "@/public/board/AramNarang.webp";
+import BoardCard from "@/components/board/BoardCard";
+import { boardInfo } from "@/data/BoardData";
 
 const BoardMapping = () => {
   return (
-    <div>
-      <BoardCard
-        name="Aram Narang"
-        role="CO-PRESIDENT"
-        image={Alex}
-        linkedin="https://www.linkedin.com/in/aram-narang/"
-      />
+    <div className="flex flex-row flex-wrap items-center justify-center">
+      {boardInfo.map((member, index) => (
+        <BoardCard
+          key={index}
+          name={member.name}
+          role={member.title}
+          image={member.image}
+          linkedin={member.linkedin}
+        />
+      ))}
     </div>
   );
 };
