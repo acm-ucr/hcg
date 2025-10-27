@@ -11,7 +11,8 @@ export interface BoardCardProps {
 
 const BoardCard = ({ name, role, image, linkedin }: BoardCardProps) => {
   return (
-    <div className="flex flex-col items-center text-center">
+    
+    <div className="w-1/3 flex flex-col items-center text-center p-6">
       <Image src={image} alt={name} className="mx-auto mb-4 rounded-full" />
 
       <div className="text-center text-xl font-semibold">{name}</div>
