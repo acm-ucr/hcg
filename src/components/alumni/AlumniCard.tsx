@@ -27,6 +27,7 @@ const AlumniCard = ({
         {role}
       </div>
 
+      {/* The basis-<number> style acts as a minimum height for flexbox items */}
       <div className="text-hcg-dark-gray mb-4 basis-6">{currentOccupation}</div>
 
       <Link href={linkedin} target="_blank">
