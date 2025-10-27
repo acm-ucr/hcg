@@ -1,5 +1,5 @@
 import SolutionCard from "@/components/work/SolutionCard";
-import { SolutionsInfo } from "@/data/SolutionCards";
+import { solutionsInfos } from "@/data/SolutionCards";
 
 const Solutions = () => {
   return (
@@ -8,7 +8,7 @@ const Solutions = () => {
         Solutions
       </div>
       <div className="flex flex-row gap-x-4">
-        {SolutionsInfo.map(({ cardTitle, cardText, imageSrc }, index) => (
+        {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
           <SolutionCard
             key={index}
             cardTitle={cardTitle}
