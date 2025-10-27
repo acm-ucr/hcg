@@ -1,15 +1,22 @@
 import SolutionCard from "@/components/work/SolutionCard";
-
-import Trend from "@/public/work/solutions/trend.webp";
+import { solutionsInfos } from "@/data/SolutionCards";
 
 const Solutions = () => {
   return (
-    <div>
-      <SolutionCard
-        cardTitle="MARKET INTELLIGENCE"
-        cardText="By deciphering competitor strategies, strengths, and potential vulnerabilities, through comprehensive competitive intelligence research from our team, we are able to provide our clients with a detailed roadmap for their own market positioning and growth. Alongside this, our team uses data models to project sales and cost trends to ensure that our clients can make informed decisions that are underpinned by rich market insights."
-        imageSrc={Trend}
-      />
+    <div className="mx-auto w-5/6">
+      <div className="text-hcg-pastel-brown mb-8 text-center text-3xl font-bold">
+        Solutions
+      </div>
+      <div className="flex flex-row gap-x-4">
+        {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
+          <SolutionCard
+            key={index}
+            cardTitle={cardTitle}
+            cardText={cardText}
+            imageSrc={imageSrc}
+          />
+        ))}
+      </div>
     </div>
   );
 };
