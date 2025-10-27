@@ -11,9 +11,9 @@ export interface AlumniCardProps {
 }
 
 const AlumniCard = ({
+  image,
   name,
   role,
-  image,
   currentOccupation,
   linkedin,
 }: AlumniCardProps) => {
