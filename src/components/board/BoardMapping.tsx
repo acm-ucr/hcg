@@ -3,7 +3,7 @@ import { boardInfo } from "@/data/BoardData";
 
 const BoardMapping = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center items-center">
+    <div className="flex flex-row flex-wrap items-center justify-center">
       {boardInfo.map((member, index) => (
         <BoardCard
           key={index}
