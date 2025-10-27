@@ -27,7 +27,7 @@ const AlumniCard = ({
         {role}
       </div>
 
-      <div className="text-hcg-dark-gray mb-4">{currentOccupation}</div>
+      <div className="text-hcg-dark-gray mb-4 basis-6">{currentOccupation}</div>
 
       <Link href={linkedin} target="_blank">
         <FaLinkedin className="text-hcg-gold h-8 w-8" />
