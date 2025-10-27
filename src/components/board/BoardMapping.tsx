@@ -1,4 +1,4 @@
-import BoardCard from "./BoardCard";
+import BoardCard from "@/components/board/BoardCard";
 import { boardInfo } from "@/data/BoardData";
 
 const BoardMapping = () => {
