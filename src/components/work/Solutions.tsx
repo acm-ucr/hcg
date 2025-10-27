@@ -3,11 +3,11 @@ import { SolutionsInfo } from "@/data/SolutionCards";
 
 const Solutions = () => {
   return (
-    <div className="mx-[5%]">
-      <h1 className="text-hcg-pastel-brown mb-15 text-center text-6xl font-bold">
+    <div className="mx-auto w-5/6">
+      <div className="text-hcg-pastel-brown mb-8 text-center text-3xl font-bold">
         Solutions
-      </h1>
-      <div className="grid grid-cols-3">
+      </div>
+      <div className="flex flex-row gap-x-4">
         {SolutionsInfo.map(({ cardTitle, cardText, imageSrc }, index) => (
           <SolutionCard
             key={index}
