@@ -10,6 +10,12 @@ const BoardMapping = () => {
         image={Alex}
         linkedin="https://www.linkedin.com/in/aram-narang/"
       />
+      <BoardCard
+        name="Aram Narang"
+        role="CO-PRESIDENT"
+        image={Alex}
+        linkedin="https://www.linkedin.com/in/aram-narang/"
+      />
     </div>
   );
 };
