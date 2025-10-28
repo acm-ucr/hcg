@@ -1,15 +1,27 @@
 import Button from "@/components/Button";
+import contactUsBG from "@/public/work/contactUsBG.webp";
+import Image from "next/image";
 
-const ContactUs = () => {
+interface ContactUsProps {
+  buttonText: string;
+  buttonHref: string;
+  text: string;
+}
+
+const ContactUs = ({ buttonHref, buttonText, text }: ContactUsProps) => {
   return (
-    <div className="flex min-h-100 flex-col items-center justify-center bg-(--color-hcg-black) text-center text-white">
-      <div className="flex h-full w-full flex-1 flex-col items-center justify-center bg-[url(../../public/work/contactUsBG.webp)] bg-cover bg-center p-6">
-        <p className="mb-6 p-6 text-[20px] sm:w-3/4 sm:text-3xl">
-          Driven by a passion for consulting, a dedication to transformative
-          collaborations, and experience from top firms, we're always eager to
-          tackle fresh challenges.
-        </p>
-        <Button text="Learn More" href="/work"></Button>
+    <div className="bg-hcg-black relative flex min-h-100 flex-col items-center justify-center text-center text-white">
+      <Image
+        src={contactUsBG}
+        alt="Gold Stripes"
+        objectFit="cover"
+        className="absolute z-0 h-full w-full [-webkit-user-drag:none]"
+      />
+      <p className="z-20 mb-6 w-4/5 p-6 text-[20px] md:w-3/4 md:text-3xl">
+        {text}
+      </p>
+      <div className="z-20">
+        <Button text={buttonText} href={buttonHref} />
       </div>
     </div>
   );

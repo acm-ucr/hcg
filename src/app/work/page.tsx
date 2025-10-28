@@ -19,7 +19,13 @@ const Work = () => {
       />
       <Clients />
       <Solutions />
-      <ContactUs />
+      <ContactUs
+        buttonText="Learn More"
+        buttonHref="/work"
+        text="Driven by a passion for consulting, a dedication to transformative
+          collaborations, and experience from top firms, we're always eager to
+          tackle fresh challenges."
+      />
     </div>
   );
 };
