@@ -4,7 +4,7 @@ interface titleProps {
 
 const Title = ({ title }: titleProps) => {
   return (
-    <div className="text-hcg-pastel-brown translate-y-1/4 text-center text-5xl font-medium py-4">
+    <div className="text-hcg-pastel-brown translate-y-1/4 py-4 text-center text-5xl font-medium">
       {title}
     </div>
   );
