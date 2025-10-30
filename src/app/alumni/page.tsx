@@ -8,7 +8,7 @@ const Alumni = () => {
   return (
     <div>
       <Header title="Alumni" headerPicture={workHeader} />
-      <Title />
+      <Title title="Alumni" />
       <AlumniMapping />
     </div>
   );
