@@ -8,7 +8,7 @@ const Board = () => {
   return (
     <div className="">
       <Header title="Meet the Team" headerPicture={workHeader} />
-      <Title />
+      <Title title="Board" />
       <BoardMapping />
     </div>
   );
