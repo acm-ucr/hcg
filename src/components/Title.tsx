@@ -1,10 +1,13 @@
 interface titleProps {
   title: string;
+  color?: string;
 }
 
-const Title = ({ title }: titleProps) => {
+const Title = ({ title, color }: titleProps) => {
   return (
-    <div className="text-hcg-pastel-brown translate-y-1/4 py-4 text-center text-5xl font-medium">
+    <div
+      className={`${color || "text-hcg-pastel-brown"} translate-y-1/4 py-4 text-center text-5xl font-medium`}
+    >
       {title}
     </div>
   );
