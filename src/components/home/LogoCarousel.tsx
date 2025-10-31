@@ -2,15 +2,31 @@
 
 import { carouselData } from "@/data/CarouselItems";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const LogoCarousel = () => {
+  const duplicatedData = [
+    ...carouselData,
+    ...carouselData,
+    ...carouselData,
+    ...carouselData,
+  ];
+  const totalWidth = carouselData.length * 192;
   return (
     <div className="bg-hcg-white w-full overflow-hidden">
-      <div className="animate-scroll flex items-center">
-        {carouselData.map(({ name, icon }, idx) => (
+      <motion.div
+        className="flex items-center"
+        animate={{ x: [0, -totalWidth] }}
+        transition={{
+          duration: 20,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+      >
+        {duplicatedData.map(({ name, icon }, idx) => (
           <div
             key={idx}
-            className="bg-hcg-white flex items-center justify-center px-4 py-4"
+            className="bg-hcg-white flex w-48 flex-shrink-0 items-center justify-center px-4 py-4"
           >
             <Image
               src={icon}
@@ -19,7 +35,7 @@ const LogoCarousel = () => {
             />
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
