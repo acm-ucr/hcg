@@ -26,7 +26,7 @@ const LogoCarousel = () => {
         {duplicatedData.map(({ name, icon }, idx) => (
           <div
             key={idx}
-            className="bg-hcg-white flex w-48 flex-shrink-0 items-center justify-center px-4 py-4"
+            className="bg-hcg-white flex w-48 flex-shrink-0 items-center justify-center p-4"
           >
             <Image
               src={icon}
