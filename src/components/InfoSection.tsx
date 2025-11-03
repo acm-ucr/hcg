@@ -9,14 +9,16 @@ export interface InfoSectionProps {
 
 const InfoSection = ({ title, text, image, imageAlt }: InfoSectionProps) => {
   return (
-    <div className="mx-auto flex w-5/6 flex-row items-center justify-center py-8">
-      <div className="flex w-1/2 flex-col justify-center space-y-6">
-        <div className="text-hcg-pastel-brown text-3xl font-bold">{title}</div>
-        <p className="flex w-3/4 items-center justify-center text-xl font-normal">
+    <div className="mx-auto flex w-5/6 flex-col items-center justify-center py-8 md:flex-row">
+      <div className="flex w-full flex-col justify-center space-y-6 md:w-1/2">
+        <div className="text-hcg-pastel-brown text-center text-3xl font-bold break-words md:text-left md:text-2xl lg:text-5xl">
+          {title}
+        </div>
+        <p className="text-m justify-center text-center font-normal md:w-3/4 md:text-left md:text-lg">
           {text}
         </p>
       </div>
-      <div className="flex h-auto w-1/2 justify-center">
+      <div className="flex h-auto w-full justify-center pt-8 md:w-1/2 md:pt-0">
         <Image src={image} alt={imageAlt} />
       </div>
     </div>
