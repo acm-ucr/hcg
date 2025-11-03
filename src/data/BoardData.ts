@@ -5,6 +5,7 @@ import FarisImg from "@/public/board/FarisMohammady.webp";
 import AlexImg from "@/public/board/AlexSin.webp";
 import HarnoorImg from "@/public/board/HarnoorKaur.webp";
 import MilanImg from "@/public/board/MilanMohamed.webp";
+import AnanyaImg from "@/public/board/AnanyaGowrishankar.webp";
 
 interface BoardInfoProps {
   name: string;
@@ -43,5 +44,11 @@ export const boardInfo: BoardInfoProps[] = [
     title: "DIRECTOR OF MARKETING",
     image: MilanImg,
     linkedin: "https://www.linkedin.com/in/milan-mohamed/",
+  },
+  {
+    name: "Ananya Gowrishankar",
+    title: "HEAD OF CONSULTING",
+    image: AnanyaImg,
+    linkedin: "https://www.linkedin.com/in/ananya-gowrishankar-/",
   },
 ];
