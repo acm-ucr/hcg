@@ -22,7 +22,7 @@ const MailingList = () => {
               <input className="w-full bg-white p-3 focus:outline-none" />
             </div>
             <div className="mt-6 flex justify-center md:justify-start">
-              <button className="cursor-pointer rounded-lg bg-black px-8 py-3 text-lg text-white">
+              <button className="cursor-pointer rounded-lg bg-black px-12 py-2 text-lg text-white">
                 Submit
               </button>
             </div>
