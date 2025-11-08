@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Button from "@/components/Button";
 
 const OurTeam = () => {
@@ -10,7 +12,15 @@ const OurTeam = () => {
         Our members come from all majors and bring leadership experiences from a
         wide variety of professional backgrounds:
       </p>
-      <Button text="Learn More" href="/work" />
+      <motion.div
+        whileHover={{
+          scale: [1, 1.2, 1.3, 1.75],
+          rotate: [0, 0, 180, 180, 0],
+          borderRadius: ["0%", "20%", "50%", "0%"],
+        }}
+      >
+        <Button text="Learn More" href="/work" />
+      </motion.div>
     </div>
   );
 };
