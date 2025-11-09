@@ -2,7 +2,6 @@ interface titleProps {
   title: string;
   color?: string;
   className?: string;
-  
 }
 
 const Title = ({ title, color, className }: titleProps) => {
