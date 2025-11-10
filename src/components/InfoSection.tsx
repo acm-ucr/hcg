@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
 import Title from "@/components/Title";
 
@@ -20,13 +23,25 @@ const InfoSection = ({ title, text, image, imageAlt }: InfoSectionProps) => {
               "med:text-3xl text-center text-xl font-bold sm:text-2xl md:text-left"
             }
           />
-          <p className="flex items-center justify-center text-center text-sm font-normal sm:text-lg md:w-3/4 md:text-left md:text-xl">
+          <motion.p
+            className="flex items-center justify-center text-center text-sm font-normal sm:text-lg md:w-3/4 md:text-left md:text-xl"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.25 }}
+          >
             {text}
-          </p>
+          </motion.p>
         </div>
-        <div className="hidden h-auto w-1/2 justify-center md:flex">
+        <motion.div
+          className="hidden h-auto w-1/2 justify-center md:flex"
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, scale: { type: "spring", bounce: 0.5 } }}
+          viewport={{ once: true, amount: "all" }}
+        >
           <Image src={image} alt={imageAlt} />
-        </div>
+        </motion.div>
       </div>
       <div className="mx-auto mb-5 w-5/6 md:hidden">
         <Image src={image} alt={imageAlt} />
