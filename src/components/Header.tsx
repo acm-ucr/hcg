@@ -1,5 +1,6 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
-
+import { motion } from "motion/react";
 interface HeaderProps {
   title: string;
   headerPicture: StaticImageData;
@@ -15,9 +16,13 @@ const Header = ({ title, headerPicture }: HeaderProps) => {
         className="object-cover opacity-60"
         priority
       />
-      <div className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-5xl font-medium text-white">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 0.5 }}
+        className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-5xl font-medium text-white"
+      >
         {title}
-      </div>
+      </motion.div>
     </div>
   );
 };
