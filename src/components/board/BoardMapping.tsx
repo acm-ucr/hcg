@@ -11,7 +11,7 @@ const BoardMapping = () => {
           key={index}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: index * 0.3 }}
+          transition={{ duration: 0.8, delay: index * 0.15 }}
           viewport={{ once: true }}
           className="flex w-1/2 justify-center md:w-1/3"
         >
