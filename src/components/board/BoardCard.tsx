@@ -20,8 +20,6 @@ const BoardCard = ({ name, role, image, linkedin }: BoardCardProps) => {
 
       <div className="text-hcg-dark-gray mb-4 text-center">{role}</div>
       <motion.div
-        initial="hidden"
-        whileInView="display"
         whileHover={{ scale: 1.1 }}
       >
         <Link href={linkedin} target="_blank">
