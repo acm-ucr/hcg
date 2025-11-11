@@ -9,17 +9,19 @@ interface ButtonProps {
 
 const Button = ({ text, href }: ButtonProps) => {
   return (
-    <motion.div
-      initial={{ scale: 1, rotate: 0 }}
-      whileHover={{ scale: 1.2, rotate: [0, 0, 10, 10, 0] }}
-    >
-      <Link
-        href={href}
-        className="bg-hcg-gold text-hcg-white inline-block rounded-md px-4 py-2 text-sm font-thin"
+    <div className="flex flex-col items-center">
+      <motion.div
+        initial={{ scale: 1, rotate: 0 }}
+        whileHover={{ scale: 1.2, rotate: [0, 0, 10, 10, 0] }}
       >
-        {text}
-      </Link>
-    </motion.div>
+        <Link
+          href={href}
+          className="bg-hcg-gold text-hcg-white inline-block rounded-md px-4 py-2 text-sm font-thin"
+        >
+          {text}
+        </Link>
+      </motion.div>
+    </div>
   );
 };
 
