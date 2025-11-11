@@ -16,29 +16,29 @@ const InfoSection = ({ title, text, image, imageAlt }: InfoSectionProps) => {
     <div>
       <div className="mx-auto flex w-5/6 flex-row items-center justify-center py-4 md:py-8">
         <div className="flex flex-col justify-center space-y-3 md:w-1/2 md:space-y-6">
-          <Title
-            title={title}
-            color={"text-hcg-pastel-brown"}
-            className={
-              "med:text-3xl text-center text-xl font-bold sm:text-2xl md:text-left"
-            }
-          />
+          <motion.div
+            className="mx-auto md:mr-auto md:ml-0"
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Title title={title} color={"text-hcg-pastel-brown"} />
+          </motion.div>
           <motion.p
             className="flex items-center justify-center text-center text-sm font-normal sm:text-lg md:w-3/4 md:text-left md:text-xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.25 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
           >
             {text}
           </motion.p>
         </div>
         <motion.div
           className="hidden h-auto w-1/2 justify-center md:flex"
-          initial={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 0, scale: 0.6 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, scale: { type: "spring", bounce: 0.5 } }}
-          viewport={{ once: true, amount: "all" }}
+          transition={{ duration: 0.8 }}
+          // viewport={{ once: true, amount: "all" }}
         >
           <Image src={image} alt={imageAlt} />
         </motion.div>
