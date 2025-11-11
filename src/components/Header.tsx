@@ -1,5 +1,6 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
-
+import { motion } from "motion/react";
 interface HeaderProps {
   title: string;
   headerPicture: StaticImageData;
@@ -15,9 +16,14 @@ const Header = ({ title, headerPicture }: HeaderProps) => {
         className="object-cover object-top opacity-60"
         priority
       />
-      <div className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-3xl font-medium text-white md:text-5xl xl:text-6xl">
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-3xl font-medium text-white md:text-5xl xl:text-6xl"
+      >
         {title}
-      </div>
+      </motion.div>
     </div>
   );
 };
