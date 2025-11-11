@@ -6,7 +6,7 @@ import Image from "next/image";
 import SmallLogo from "@/public/smallLogo.webp";
 import { FaBars } from "react-icons/fa";
 import { HiXMark } from "react-icons/hi2";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navigation = () => {
   // const [select, selected] = useState("");
@@ -16,9 +16,17 @@ const Navigation = () => {
     toggleVisibility(!visibility);
   };
 
+  useEffect(() => {
+    if (visibility) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [visibility]);
+
   return (
     <div>
-      <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-[60] flex h-24 items-center justify-between bg-linear-to-r p-8">
+      <div className="from-hcg-black to-hcg-gold sticky inset-x-0 top-0 z-[60] flex h-24 items-center justify-between bg-linear-to-r p-8">
         <div className="flex w-full">
           <Image src={SmallLogo} alt="SmallLogo" />
         </div>
