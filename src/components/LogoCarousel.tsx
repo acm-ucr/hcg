@@ -18,7 +18,7 @@ const LogoCarousel = () => {
         className="flex items-center"
         animate={{ x: [0, -totalWidth] }}
         transition={{
-          duration: 20,
+          duration: 60,
           ease: "linear",
           repeat: Infinity,
         }}
@@ -26,7 +26,7 @@ const LogoCarousel = () => {
         {duplicatedData.map(({ name, icon }, idx) => (
           <div
             key={idx}
-            className="bg-hcg-white flex w-48 flex-shrink-0 items-center justify-center p-4"
+            className="bg-hcg-white flex w-48 flex-shrink-0 items-center justify-center px-8 py-4"
           >
             <Image
               src={icon}

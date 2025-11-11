@@ -1,3 +1,5 @@
+"use client";
+
 import navbarLinks from "@/data/NavbarData";
 import Link from "next/link";
 import Image from "next/image";
