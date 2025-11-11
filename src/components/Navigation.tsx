@@ -26,7 +26,7 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="from-hcg-black to-hcg-gold sticky inset-x-0 top-0 z-[60] flex h-24 items-center justify-between bg-linear-to-r p-8">
+      <div className="from-hcg-black to-hcg-gold sticky inset-x-0 top-0 z-[60] flex h-24 items-center justify-between bg-linear-to-r p-2">
         <div className="flex w-full">
           <Image src={SmallLogo} alt="SmallLogo" />
         </div>
@@ -40,7 +40,7 @@ const Navigation = () => {
         </div>
 
         <button
-          className="text-hcg-white flex text-5xl md:inline lg:hidden"
+          className="text-hcg-white flex text-5xl sm:inline md:hidden"
           onClick={toggleIconVisibility}
         >
           {visibility ? <HiXMark /> : <FaBars />}
