@@ -50,7 +50,7 @@ const Navigation = () => {
       {/* Mobile Dropdown Below */}
       {visibility && (
         <div className="from-hcg-black to-hcg-gold text-hcg-white fixed inset-0 z-50 flex flex-col items-center justify-start bg-linear-to-r whitespace-nowrap md:hidden">
-          <div className="flex w-full max-w-xl flex-col items-stretch gap-8 px-5 pt-24">
+          <div className="flex w-full max-w-xl flex-col items-stretch gap-8 px-5 pt-32">
             {navbarLinks.map(({ name, link }, index) => (
               <Link
                 href={link}
