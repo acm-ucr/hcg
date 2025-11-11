@@ -17,8 +17,9 @@ const Header = ({ title, headerPicture }: HeaderProps) => {
         priority
       />
       <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
         className="absolute top-1/2 w-full -translate-y-1/2 p-5 text-center text-5xl font-medium text-white"
       >
         {title}
