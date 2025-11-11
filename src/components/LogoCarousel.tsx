@@ -18,7 +18,7 @@ const LogoCarousel = () => {
         className="flex items-center"
         animate={{ x: [0, -totalWidth] }}
         transition={{
-          duration: 30,
+          duration: 60,
           ease: "linear",
           repeat: Infinity,
         }}
