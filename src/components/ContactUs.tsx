@@ -1,7 +1,9 @@
+"use client";
 import Button from "@/components/Button";
 import contactUsBG from "@/public/work/contactUsBG.webp";
 import Title from "@/components/Title";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 interface ContactUsProps {
   buttonText: string;
@@ -26,9 +28,9 @@ const ContactUs = ({
       />
       {titleText && <Title title={titleText} color="text-white" />}
       <p className="text-md z-20 mb-6 w-4/5 p-6 md:w-3/4 md:text-xl">{text}</p>
-      <div className="z-20">
+      <motion.div whileHover={{ scale: 1.2 }} className="z-20">
         <Button text={buttonText} href={buttonHref} />
-      </div>
+      </motion.div>
     </div>
   );
 };
