@@ -18,7 +18,7 @@ const AlumniCard = ({
   linkedin,
 }: AlumniCardProps) => {
   return (
-    <div className="flex h-[55vh] flex-col items-center p-4 text-center md:h-[45vh] xl:h-full">
+    <div className="flex h-full flex-col items-center p-4 text-center">
       <Image src={image} alt={name} className="mb-4 rounded-full" />
 
       <div className="mb-2 text-xl">{name}</div>
@@ -27,7 +27,7 @@ const AlumniCard = ({
 
       <div className="text-hcg-dark-gray mb-4">{currentOccupation}</div>
 
-      <Link href={linkedin} target="_blank">
+      <Link href={linkedin} target="_blank" className="mt-auto">
         <FaLinkedin className="text-hcg-gold h-8 w-8" />
       </Link>
     </div>

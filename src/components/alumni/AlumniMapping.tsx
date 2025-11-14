@@ -4,9 +4,9 @@ import { AlumniData } from "@/data/AlumniData";
 
 const AlumniMapping = () => {
   return (
-    <div className="flex flex-row flex-wrap items-center justify-center">
+    <div className="flex flex-row flex-wrap justify-center">
       {AlumniData.map((member, index) => (
-        <div key={index} className="flex w-1/2 justify-center md:w-1/3">
+        <div key={index} className="w-1/2 md:w-1/3">
           <AlumniCard
             key={index}
             name={member.name}
