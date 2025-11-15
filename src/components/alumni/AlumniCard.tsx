@@ -18,7 +18,7 @@ const AlumniCard = ({
   linkedin,
 }: AlumniCardProps) => {
   return (
-    <div className="flex h-full flex-col items-center p-4 text-center">
+    <div className="flex h-full flex-col items-center p-6 text-center">
       <Image src={image} alt={name} className="mb-4 rounded-full" />
 
       <div className="mb-2 text-xl">{name}</div>
