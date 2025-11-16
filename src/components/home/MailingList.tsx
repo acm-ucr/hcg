@@ -31,7 +31,7 @@ const MailingList = () => {
             </div>
             {isSubmitted ? (
               <div className="text-hcg-white text-center text-xl md:text-2xl">
-                Thank you for joining our mailing list.
+                Thank you for joining!
               </div>
             ) : (
               <form
