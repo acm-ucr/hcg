@@ -3,12 +3,12 @@
 import navbarLinks from "@/data/NavbarData";
 import Link from "next/link";
 import Image from "next/image";
-import SmallLogo from "@/public/smallLogo.webp";
+import SmallLogo from "@/public/smallLogo.svg";
 
 const Navigation = () => {
   return (
-    <div className="from-hcg-black to-hcg-gold flex h-24 items-center justify-between bg-linear-to-r p-8">
-      <div className="flex w-full">
+    <div className="from-hcg-black to-hcg-gold flex h-[15vh] items-center justify-between bg-linear-to-r px-8 py-12">
+      <div className="-p-2 my-2 flex w-full">
         <Image src={SmallLogo} alt="SmallLogo" />
       </div>
 

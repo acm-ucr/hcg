@@ -5,7 +5,7 @@ import Solutions from "@/components/work/Solutions";
 import ContactUs from "@/components/ContactUs";
 
 import OurServicesImage from "@/public/work/ourServices.webp";
-import workHeader from "@/public/work/clientWorkBG.webp";
+import workHeader from "@/public/work/clientWorkBG.png";
 
 const Work = () => {
   return (
