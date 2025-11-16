@@ -1,4 +1,4 @@
-import LandingPageLogo from "@/public/groupPhoto.png";
+import LandingPageLogo from "@/public/groupPhoto.webp";
 import Image from "next/image";
 
 const LandingHeader = () => {
