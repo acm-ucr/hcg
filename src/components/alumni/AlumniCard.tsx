@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
@@ -26,10 +28,11 @@ const AlumniCard = ({
       <div className="text-hcg-dark-gray mb-2 font-normal">{role}</div>
 
       <div className="text-hcg-dark-gray mb-4">{currentOccupation}</div>
-
-      <Link href={linkedin} target="_blank" className="mt-auto">
-        <FaLinkedin className="text-hcg-gold h-8 w-8" />
-      </Link>
+      <motion.div whileHover={{ scale: 1.1 }}>
+        <Link href={linkedin} target="_blank" className="mt-auto">
+          <FaLinkedin className="text-hcg-gold h-8 w-8" />
+        </Link>
+      </motion.div>
     </div>
   );
 };
