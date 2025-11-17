@@ -1,3 +1,4 @@
+"use client";
 interface titleProps {
   title: string;
   color?: string;
