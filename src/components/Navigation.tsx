@@ -30,7 +30,8 @@ const Navigation = () => {
         <div className="flex w-full">
           <Image src={SmallLogo} alt="SmallLogo" />
         </div>
-        <div className="space-between text-hcg-white flex hidden h-auto items-center gap-8 pr-8 text-xl text-nowrap md:inline-flex">
+
+        <div className="space-between text-hcg-white hidden h-auto items-center gap-8 pr-8 text-xl whitespace-nowrap md:inline-flex">
           {navbarLinks.map(({ name, link }, index) => (
             <Link href={link} key={index}>
               {name}
@@ -39,7 +40,7 @@ const Navigation = () => {
         </div>
 
         <button
-          className="text-hcg-white flex text-5xl md:inline lg:hidden"
+          className="text-hcg-white flex text-5xl sm:inline md:hidden"
           onClick={toggleIconVisibility}
         >
           {visibility ? <HiXMark /> : <FaBars />}
@@ -47,7 +48,7 @@ const Navigation = () => {
       </div>
 
       {visibility && (
-        <div className="from-hcg-black to-hcg-gold text-hcg-white sticky inset-0 top-0 z-50 flex flex-col items-center justify-start bg-linear-to-r whitespace-nowrap md:hidden">
+        <div className="from-hcg-black to-hcg-gold text-hcg-white sticky inset-0 z-50 flex flex-col items-center justify-start bg-linear-to-r whitespace-nowrap md:hidden">
           <div className="flex w-full max-w-xl flex-col items-stretch gap-8 pt-24 pb-42">
             {navbarLinks.map(({ name, link }, index) => (
               <Link
