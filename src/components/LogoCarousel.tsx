@@ -1,24 +1,25 @@
 "use client";
 
-import { carouselData } from "@/data/CarouselItems";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "motion/react";
 
-const LogoCarousel = () => {
-  const duplicatedData = [
-    ...carouselData,
-    ...carouselData,
-    ...carouselData,
-    ...carouselData,
-  ];
-  const totalWidth = carouselData.length * 192;
+type CarouselItem = {
+  name: string;
+  icon: StaticImageData;
+};
+
+const LogoCarousel = ({ data }: { data: CarouselItem[] }) => {
+  const duplicatedData = [...data, ...data, ...data, ...data];
+  const totalWidth = data.length * 192;
+  const SPEED = 70;
+  const duration = totalWidth / SPEED;
   return (
     <div className="bg-hcg-white w-full overflow-hidden">
       <motion.div
         className="flex items-center"
         animate={{ x: [0, -totalWidth] }}
         transition={{
-          duration: 60,
+          duration,
           ease: "linear",
           repeat: Infinity,
         }}
