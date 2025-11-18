@@ -32,10 +32,10 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-[60] flex h-[15vh] p-8 items-center justify-between bg-linear-to-r">
+      <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-[60] flex h-[15vh] items-center justify-between bg-linear-to-r p-8">
         <div className="sticky flex w-full">
           <Link href="/">
-          <Image src={SmallLogo} alt="SmallLogo" className="h-18 w-auto" />
+            <Image src={SmallLogo} alt="SmallLogo" className="h-18 w-auto" />
           </Link>
         </div>
 
@@ -51,7 +51,7 @@ const Navigation = () => {
 
         <motion.div {...fadeIn(0.15)}>
           <button
-            className="text-hcg-white flex text-5xl sm:inline md:hidden cursor-pointer"
+            className="text-hcg-white flex cursor-pointer text-5xl sm:inline md:hidden"
             onClick={toggleIconVisibility}
           >
             {visibility ? <HiXMark /> : <FaBars />}
@@ -66,17 +66,21 @@ const Navigation = () => {
       >
         <div className="flex w-full max-w-xl flex-col gap-2 pb-4">
           {navbarLinks.map(({ name, link }, i) => (
-            <motion.div animate={{ opacity: visibility ? 1 : 0 }} transition={{ duration: 0.4, delay: i * 0.15 }} key={i} className="w-full text-center h-min">
-              <motion.div {...hoverAnimation} className="w-auto">
-            <Link
-              href={link}
-              className="text-2xl"
-              onClick={toggleIconVisibility}
+            <motion.div
+              animate={{ opacity: visibility ? 1 : 0 }}
+              transition={{ duration: 0.4, delay: i * 0.15 }}
+              key={i}
+              className="h-min w-full text-center"
             >
-              
-              {name}
-            </Link>
-            </motion.div>
+              <motion.div {...hoverAnimation} className="inline-block">
+                <Link
+                  href={link}
+                  className="text-2xl"
+                  onClick={toggleIconVisibility}
+                >
+                  {name}
+                </Link>
+              </motion.div>
             </motion.div>
           ))}
         </div>
