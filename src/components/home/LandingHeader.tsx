@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import LandingPageLogo from "@/public/groupPhoto.webp";
 import Image from "next/image";
 
@@ -13,8 +16,21 @@ const LandingHeader = () => {
       />
 
       <div className="text-hcg-white absolute content-center text-center opacity-100">
-        <div className="text-5xl font-bold">Highlander Consulting Group</div>
-        <div>UC Riverside's Premier Consulting Organization</div>
+        <motion.div
+          className="text-5xl font-bold"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Highlander Consulting Group
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          UC Riverside's Premier Consulting Organization
+        </motion.div>
       </div>
     </div>
   );
