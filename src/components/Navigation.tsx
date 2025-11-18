@@ -32,7 +32,7 @@ const Navigation = () => {
 
   return (
     <div>
-      <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-[60] flex h-[15vh] items-center justify-between bg-linear-to-r p-8">
+      <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-50 flex h-[15vh] items-center justify-between bg-linear-to-r p-8">
         <div className="sticky flex w-full">
           <Link href="/">
             <Image src={SmallLogo} alt="SmallLogo" className="h-18 w-auto" />
@@ -51,7 +51,7 @@ const Navigation = () => {
 
         <motion.div {...fadeIn(0.15)}>
           <button
-            className="text-hcg-white flex cursor-pointer text-5xl sm:inline md:hidden"
+            className="text-hcg-white flex cursor-pointer text-3xl md:hidden"
             onClick={toggleIconVisibility}
           >
             {visibility ? <HiXMark /> : <FaBars />}
