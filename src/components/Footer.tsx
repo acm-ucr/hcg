@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="flex space-x-4 p-2 md:p-0">
         {footerLinks.map(({ icon: Icon, url }, idx) => (
           <Link key={idx} href={url} target="_blank">
-            <Icon className="h-8 w-8 text-white" />
+            <Icon className="h-8 w-8 text-white transition-transform duration-200 hover:scale-125" />
           </Link>
         ))}
       </div>
