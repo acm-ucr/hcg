@@ -4,6 +4,12 @@ import { motion } from "motion/react";
 import LandingPageLogo from "@/public/groupPhoto.webp";
 import Image from "next/image";
 
+const headerAnimation = {
+  initial: { opacity: 0, y: -30 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 },
+};
+
 const LandingHeader = () => {
   return (
     <div className="relative flex h-[75vh] w-full flex-col items-center justify-center">
@@ -16,19 +22,10 @@ const LandingHeader = () => {
       />
 
       <div className="text-hcg-white absolute content-center text-center opacity-100">
-        <motion.div
-          className="text-5xl font-bold"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <motion.div className="text-5xl font-bold" {...headerAnimation}>
           Highlander Consulting Group
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <motion.div {...headerAnimation}>
           UC Riverside's Premier Consulting Organization
         </motion.div>
       </div>
