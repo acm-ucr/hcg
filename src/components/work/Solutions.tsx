@@ -7,7 +7,7 @@ import Title from "@/components/Title";
 
 const Solutions = () => {
   return (
-    <div className="mx-auto w-5/6">
+    <div className="mx-auto w-5/6 py-8">
       <div className="mb-8">
         <Title title="Solutions" />
       </div>
@@ -15,14 +15,13 @@ const Solutions = () => {
         {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
           <motion.div
             key={index}
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1.0 }}
+            initial={{ scale: 0.4, opacity: 0 }}
+            whileInView={{ scale: 1.0, opacity: 1 }}
             whileHover={{ scale: 1.03 }}
             transition={{
-              duration: 0.3,
+              duration: 0.7,
               delay: index * 0.1,
             }}
-            viewport={{ once: true }}
             className="w-full md:w-1/3"
           >
             <SolutionCard

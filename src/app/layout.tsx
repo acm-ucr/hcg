@@ -21,8 +21,9 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.className} overflow-x-hidden`}>
         <Navigation />
+        <div className="h-[15vh]"></div>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         <Footer />
       </body>

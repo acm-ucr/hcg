@@ -13,7 +13,7 @@ const Header = ({ title, headerPicture }: HeaderProps) => {
         src={headerPicture}
         alt="General Header"
         fill
-        className="object-cover object-top opacity-60"
+        className="object-cover object-top"
         priority
       />
       <motion.div

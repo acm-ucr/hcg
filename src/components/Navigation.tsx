@@ -3,60 +3,84 @@
 import navbarLinks from "@/data/NavbarData";
 import Link from "next/link";
 import Image from "next/image";
-import SmallLogo from "@/public/smallLogo.webp";
+import SmallLogo from "@/public/smallLogo.svg";
 import { FaBars } from "react-icons/fa";
 import { HiXMark } from "react-icons/hi2";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { motion } from "motion/react";
+
+const fadeIn = (delay = 0) => ({
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  transition: { duration: 0.5, delay },
+});
+
+const hoverAnimation = {
+  whileHover: { scale: 1.05 },
+  transition: {
+    duration: 0.6,
+  },
+};
 
 const Navigation = () => {
-  // const [select, selected] = useState("");
   const [visibility, toggleVisibility] = useState(false);
 
   const toggleIconVisibility = () => {
     toggleVisibility(!visibility);
+    console.log(visibility);
   };
-
 
   return (
     <div>
-      <div className="from-hcg-black to-hcg-gold inset-x-0 fixed top-0 z-[60] flex h-24 items-center justify-between bg-linear-to-r p-2">
-        <div className="flex w-full sticky">
-          <Image src={SmallLogo} alt="SmallLogo" />
+      <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-[60] flex h-[15vh] p-8 items-center justify-between bg-linear-to-r">
+        <div className="sticky flex w-full">
+          <Link href="/">
+          <Image src={SmallLogo} alt="SmallLogo" className="h-18 w-auto" />
+          </Link>
         </div>
 
-        <div className="space-between text-hcg-white  hidden h-auto items-center gap-8 pr-8 text-xl md:flex">
-          {navbarLinks.map(({ name, link }, index) => (
-            <Link href={link} key={index}>
-              {name}
-            </Link>
+        <div className="text-hcg-white hidden h-auto items-center gap-8 pr-8 text-xl md:flex">
+          {navbarLinks.map(({ name, link }, i) => (
+            <motion.div {...fadeIn(i * 0.15)} key={i} className="w-max">
+              <motion.div {...hoverAnimation}>
+                <Link href={link}>{name}</Link>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
 
-        <button
-          className="text-hcg-white flex text-5xl sm:inline md:hidden"
-          onClick={toggleIconVisibility}
-        >
-          {visibility ? <HiXMark /> : <FaBars />}
-        </button>
+        <motion.div {...fadeIn(0.15)}>
+          <button
+            className="text-hcg-white flex text-5xl sm:inline md:hidden cursor-pointer"
+            onClick={toggleIconVisibility}
+          >
+            {visibility ? <HiXMark /> : <FaBars />}
+          </button>
+        </motion.div>
       </div>
 
-      {visibility && (
-  <div className="from-hcg-black to-hcg-gold text-hcg-white fixed top-24 left-0 right-0 z-50 flex flex-col items-center justify-start bg-linear-to-r md:hidden">
-    <div className="flex w-full max-w-xl flex-col gap-8 py-8">
-      {navbarLinks.map(({ name, link }, index) => (
-        <Link
-          href={link}
-          key={index}
-          className="w-full px-4 py-4 text-center text-3xl"
-          onClick={toggleIconVisibility}
-        >
-          {name}
-        </Link>
-      ))}
-    </div>
-  </div>
-)}
-
+      <div
+        className={`from-hcg-black to-hcg-gold text-hcg-white fixed top-[15vh] right-0 left-0 z-50 flex flex-col items-center justify-start bg-linear-to-r transition-all duration-300 md:hidden ${
+          visibility ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex w-full max-w-xl flex-col gap-2 pb-4">
+          {navbarLinks.map(({ name, link }, i) => (
+            <motion.div animate={{ opacity: visibility ? 1 : 0 }} transition={{ duration: 0.4, delay: i * 0.15 }} key={i} className="w-full text-center h-min">
+              <motion.div {...hoverAnimation} className="w-auto">
+            <Link
+              href={link}
+              className="text-2xl"
+              onClick={toggleIconVisibility}
+            >
+              
+              {name}
+            </Link>
+            </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

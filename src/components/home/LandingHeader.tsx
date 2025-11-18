@@ -1,4 +1,4 @@
-import LandingPageLogo from "@/public/mainLogo.webp";
+import LandingPageLogo from "@/public/groupPhoto.webp";
 import Image from "next/image";
 
 const LandingHeader = () => {
@@ -8,7 +8,7 @@ const LandingHeader = () => {
         src={LandingPageLogo}
         alt="General Header"
         fill
-        className="object-cover opacity-80"
+        className="object-cover opacity-100"
         priority
       />
 
