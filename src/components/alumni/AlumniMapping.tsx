@@ -4,10 +4,10 @@ import AlumniCard from "@/components/alumni/AlumniCard";
 import { AlumniData } from "@/data/AlumniData";
 
 const mappingAnimation = (delay = 0) => ({
-  initial: { opacity: 0.75, scale: 0.85},
+  initial: { opacity: 0.75, scale: 0.85 },
   whileInView: { opacity: 1, scale: 1 },
-  transition: { duration: 0.6, delay}
-})
+  transition: { duration: 0.6, delay },
+});
 
 const AlumniMapping = () => {
   return (

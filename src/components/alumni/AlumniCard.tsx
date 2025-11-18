@@ -13,8 +13,8 @@ export interface AlumniCardProps {
 }
 
 const cardAnimation = {
-   whileHover: { scale: 1.1 }
-}
+  whileHover: { scale: 1.1 },
+};
 
 const AlumniCard = ({
   image,
