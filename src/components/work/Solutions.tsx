@@ -20,32 +20,19 @@ const Solutions = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (!carouselApi) return;
-
-    const updateCarouselState = () => {
+    if (!carouselApi) {
+      return;
+    }
+    carouselApi.on("select", () => {
       setCurrentIndex(carouselApi.selectedScrollSnap());
-    };
-
-    updateCarouselState();
-
-    carouselApi.on("select", updateCarouselState);
-
-    return () => {
-      carouselApi.off("select", updateCarouselState);
-    };
+    });
   }, [carouselApi]);
 
-  const scrollToIndex = (index: number) => {
-    carouselApi?.scrollTo(index);
-  };
-
   return (
-    <div>
-      <div className="mx-auto hidden w-5/6 md:block">
-        <div className="mb-8">
-          <Title title="Solutions" />
-        </div>
-        <div className="mx-auto flex flex-col gap-4 md:flex-row md:gap-6">
+    <>
+      <div className="mx-auto w-5/6 py-8">
+        <Title title="Solutions" className="mb-8" />
+        <div className="hidden gap-4 md:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
             <motion.div
               key={index}
@@ -57,7 +44,6 @@ const Solutions = () => {
                 delay: index * 0.1,
               }}
               viewport={{ once: true }}
-              className="w-full md:w-1/3"
             >
               <SolutionCard
                 cardTitle={cardTitle}
@@ -67,41 +53,37 @@ const Solutions = () => {
             </motion.div>
           ))}
         </div>
-      </div>
-
-      <div className="flex flex-row items-center justify-center gap-6 md:hidden">
-        <div>
-          <button onClick={() => scrollToIndex(currentIndex - 1)}>
+        <div className="flex gap-4 md:hidden">
+          <button onClick={() => carouselApi?.scrollTo(currentIndex - 1)}>
             <Image src={leftArrow} alt="Left Arrow" />
           </button>
-        </div>
-        <Carousel
-          setApi={setCarouselApi}
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-2/3"
-        >
-          <CarouselContent>
-            {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
-              <CarouselItem key={index}>
-                <SolutionCard
-                  cardTitle={cardTitle}
-                  cardText={cardText}
-                  imageSrc={imageSrc}
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-        <div>
-          <button onClick={() => scrollToIndex(currentIndex + 1)}>
+          <Carousel
+            setApi={setCarouselApi}
+            opts={{
+              loop: true,
+            }}
+            className="w-3/4"
+          >
+            <CarouselContent>
+              {solutionsInfos.map(
+                ({ cardTitle, cardText, imageSrc }, index) => (
+                  <CarouselItem key={index}>
+                    <SolutionCard
+                      cardTitle={cardTitle}
+                      cardText={cardText}
+                      imageSrc={imageSrc}
+                    />
+                  </CarouselItem>
+                ),
+              )}
+            </CarouselContent>
+          </Carousel>
+          <button onClick={() => carouselApi?.scrollTo(currentIndex + 1)}>
             <Image src={rightArrow} alt="Right Arrow" />
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
