@@ -4,35 +4,86 @@ import { motion } from "motion/react";
 import SolutionCard from "@/components/work/SolutionCard";
 import { solutionsInfos } from "@/data/SolutionCards";
 import Title from "@/components/Title";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselApi,
+} from "@/components/ui/carousel";
+import Image from "next/image";
+import leftArrow from "@/public/work/leftArrow.svg";
+import rightArrow from "@/public/work/rightArrow.svg";
+import { useState, useEffect } from "react";
 
 const Solutions = () => {
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (!carouselApi) {
+      return;
+    }
+    carouselApi.on("select", () => {
+      setCurrentIndex(carouselApi.selectedScrollSnap());
+    });
+  }, [carouselApi]);
+
   return (
-    <div className="mx-auto w-5/6 py-8">
-      <div className="mb-8">
-        <Title title="Solutions" />
-      </div>
-      <div className="mx-auto flex flex-col gap-4 md:flex-row md:gap-6">
-        {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
-          <motion.div
-            key={index}
-            initial={{ scale: 0.4, opacity: 0 }}
-            whileInView={{ scale: 1.0, opacity: 1 }}
-            whileHover={{ scale: 1.03 }}
-            transition={{
-              duration: 0.7,
-              delay: index * 0.1,
+    <>
+      <div className="mx-auto w-5/6 py-8">
+        <Title title="Solutions" className="mb-8" />
+        <div className="hidden gap-4 md:flex">
+          {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
+            <motion.div
+              key={index}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1.0 }}
+              whileHover={{ scale: 1.03 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+              }}
+              viewport={{ once: true }}
+            >
+              <SolutionCard
+                cardTitle={cardTitle}
+                cardText={cardText}
+                imageSrc={imageSrc}
+              />
+            </motion.div>
+          ))}
+        </div>
+        <div className="flex gap-4 md:hidden">
+          <button onClick={() => carouselApi?.scrollTo(currentIndex - 1)}>
+            <Image src={leftArrow} alt="Left Arrow" />
+          </button>
+          <Carousel
+            setApi={setCarouselApi}
+            opts={{
+              loop: true,
             }}
-            className="w-full md:w-1/3"
+            className="w-3/4"
           >
-            <SolutionCard
-              cardTitle={cardTitle}
-              cardText={cardText}
-              imageSrc={imageSrc}
-            />
-          </motion.div>
-        ))}
+            <CarouselContent>
+              {solutionsInfos.map(
+                ({ cardTitle, cardText, imageSrc }, index) => (
+                  <CarouselItem key={index}>
+                    <SolutionCard
+                      cardTitle={cardTitle}
+                      cardText={cardText}
+                      imageSrc={imageSrc}
+                    />
+                  </CarouselItem>
+                ),
+              )}
+            </CarouselContent>
+          </Carousel>
+          <button onClick={() => carouselApi?.scrollTo(currentIndex + 1)}>
+            <Image src={rightArrow} alt="Right Arrow" />
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
