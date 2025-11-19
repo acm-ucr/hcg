@@ -8,6 +8,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 
 const MailingList = () => {
+  const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
@@ -31,7 +32,7 @@ const MailingList = () => {
             </div>
             {isSubmitted ? (
               <div className="text-hcg-white text-center text-xl md:text-2xl">
-                Thank you for joining!
+                Thank you for joining {email}!
               </div>
             ) : (
               <form
@@ -66,6 +67,8 @@ const MailingList = () => {
                   <input
                     className="w-full bg-white p-3 focus:outline-none"
                     name="entry.1315568053"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
