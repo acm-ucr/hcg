@@ -15,6 +15,17 @@ import leftArrow from "@/public/work/leftArrow.svg";
 import rightArrow from "@/public/work/rightArrow.svg";
 import { useState, useEffect } from "react";
 
+const solutionsAnimation = (delay = 0) => ({
+  initial: { scale: 0 },
+  whileInView: { scale: 1.0 },
+  whileHover: { scale: 1.03 },
+  transition: {
+    duration: 0.5,
+    delay,
+  },
+  viewport: { once: true },
+});
+
 const Solutions = () => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,17 +45,7 @@ const Solutions = () => {
         <Title title="Solutions" className="mb-8" />
         <div className="hidden gap-4 md:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
-            <motion.div
-              key={index}
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1.0 }}
-              whileHover={{ scale: 1.03 }}
-              transition={{
-                duration: 0.3,
-                delay: index * 0.1,
-              }}
-              viewport={{ once: true }}
-            >
+            <motion.div key={index} {...solutionsAnimation(index * 0.3)}>
               <SolutionCard
                 cardTitle={cardTitle}
                 cardText={cardText}

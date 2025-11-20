@@ -34,7 +34,7 @@ const AlumniCard = ({
       <div className="text-hcg-dark-gray mb-4">{currentOccupation}</div>
       <motion.div {...cardAnimation}>
         <Link href={linkedin} target="_blank" className="mt-auto">
-          <FaLinkedin className="text-hcg-gold h-8 w-8" />
+          <FaLinkedin className="text-hcg-gold h-12 w-12" />
         </Link>
       </motion.div>
     </div>

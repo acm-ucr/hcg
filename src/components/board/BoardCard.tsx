@@ -11,6 +11,10 @@ export interface BoardCardProps {
   linkedin: string;
 }
 
+const boardCardAimation = {
+  whileHover: { scale: 1.1 },
+};
+
 const BoardCard = ({ name, role, image, linkedin }: BoardCardProps) => {
   return (
     <div className="flex flex-col items-center p-8 text-center">
@@ -19,7 +23,7 @@ const BoardCard = ({ name, role, image, linkedin }: BoardCardProps) => {
       <div className="text-center text-xl font-semibold">{name}</div>
 
       <div className="text-hcg-dark-gray mb-4 text-center">{role}</div>
-      <motion.div whileHover={{ scale: 1.1 }}>
+      <motion.div {...boardCardAimation}>
         <Link href={linkedin} target="_blank">
           <FaLinkedin className="text-hcg-gold h-12 w-12" />
         </Link>
