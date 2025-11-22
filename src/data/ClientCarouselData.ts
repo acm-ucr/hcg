@@ -1,11 +1,11 @@
-import alinea from "@/public/work/logos/alinea.webp";
+import Alinea from "@/public/work/logos/Alinea.webp";
 import BeReal from "@/public/work/logos/BeReal.webp";
-import bookit from "@/public/work/logos/bookit.webp";
+import Bookit from "@/public/work/logos/Bookit.webp";
 import Capturely from "@/public/work/logos/Capturely.webp";
 import EdgeSoundResearch from "@/public/work/logos/EdgeSoundResearch.webp";
 import EthosHealth from "@/public/work/logos/EthosHealth.webp";
 import Quokka from "@/public/work/logos/Quokka.webp";
-import uruit from "@/public/work/logos/uruit.webp";
+import Uruit from "@/public/work/logos/Uruit.webp";
 import { StaticImageData } from "next/image";
 
 interface ClientCarouselDataItem {
@@ -14,12 +14,12 @@ interface ClientCarouselDataItem {
 }
 
 export const clientCarouselData: ClientCarouselDataItem[] = [
-  { name: "alinea", icon: alinea },
+  { name: "alinea", icon: Alinea },
   { name: "BeReal", icon: BeReal },
-  { name: "bookit", icon: bookit },
+  { name: "bookit", icon: Bookit },
   { name: "Capturely", icon: Capturely },
   { name: "EdgeSoundResearch", icon: EdgeSoundResearch },
   { name: "EthosHealth", icon: EthosHealth },
   { name: "Quokka", icon: Quokka },
-  { name: "uruit", icon: uruit },
+  { name: "uruit", icon: Uruit },
 ];

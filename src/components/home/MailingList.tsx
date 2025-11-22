@@ -6,6 +6,13 @@ declare global {
 }
 import { useState } from "react";
 import toast from "react-hot-toast";
+import Title from "@/components/Title";
+import { motion } from "motion/react";
+
+const buttonAnimation = {
+  initial: { scale: 1, rotate: 0 },
+  whileHover: { scale: 1.2, rotate: [0, 0, 10, 10, 0] },
+};
 
 const MailingList = () => {
   const [email, setEmail] = useState("");
@@ -26,12 +33,14 @@ const MailingList = () => {
       />
       <div className="flex items-center justify-center py-8">
         <div className="bg-hcg-gold w-4/5 rounded-2xl p-2">
-          <div className="font-hcg-main rounded-2xl border border-white p-10 font-light">
-            <div className="mb-10 text-center text-2xl font-bold text-white md:text-5xl">
-              Join our Mailing List
-            </div>
+          <div className="font-hcg-main rounded-2xl border border-white p-8 font-light">
             {isSubmitted ? (
-              <div className="text-hcg-white text-center text-xl md:text-2xl">
+              <Title title="Success!" color="text-white" />
+            ) : (
+              <Title title="Join our Mailing List" color="text-white" />
+            )}
+            {isSubmitted ? (
+              <div className="text-hcg-white text-md text-center md:text-xl">
                 Thank you for joining {email}!
               </div>
             ) : (
@@ -46,7 +55,9 @@ const MailingList = () => {
               >
                 <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-6">
                   <div className="flex-1">
-                    <div className="mb-2 text-lg text-white">First Name</div>
+                    <div className="text-md mb-2 text-white md:text-xl">
+                      First Name
+                    </div>
                     <input
                       className="w-full bg-white p-3 focus:outline-none"
                       name="entry.2094777015"
@@ -54,7 +65,9 @@ const MailingList = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <div className="mb-2 text-lg text-white">Last Name</div>
+                    <div className="text-md mb-2 text-white md:text-xl">
+                      Last Name
+                    </div>
                     <input
                       className="w-full bg-white p-3 focus:outline-none"
                       name="entry.222275708"
@@ -63,7 +76,9 @@ const MailingList = () => {
                   </div>
                 </div>
                 <div>
-                  <div className="mb-2 text-lg text-white">Email</div>
+                  <div className="text-md mb-2 text-white md:text-xl">
+                    Email
+                  </div>
                   <input
                     className="w-full bg-white p-3 focus:outline-none"
                     name="entry.1315568053"
@@ -72,10 +87,15 @@ const MailingList = () => {
                     required
                   />
                 </div>
-                <div className="mt-6 flex justify-center md:justify-start">
-                  <button className="cursor-pointer rounded-lg bg-black px-12 py-2 text-lg text-white">
-                    Submit
-                  </button>
+                <div className="mt-6 flex cursor-pointer justify-center rounded-lg py-2 md:justify-start">
+                  <motion.div {...buttonAnimation} className="mx-auto">
+                    <button
+                      type="submit"
+                      className="text-hcg-white inline-block cursor-pointer rounded-md bg-black px-4 py-2 text-sm font-thin md:text-lg"
+                    >
+                      Submit
+                    </button>
+                  </motion.div>
                 </div>
               </form>
             )}
