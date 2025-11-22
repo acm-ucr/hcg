@@ -18,7 +18,7 @@ const Button = ({ text, href }: ButtonProps) => {
       <motion.div {...buttonAnimtion}>
         <Link
           href={href}
-          className="bg-hcg-gold text-hcg-white inline-block rounded-md px-4 py-2 text-sm font-thin"
+          className="bg-hcg-gold text-hcg-white inline-block rounded-md px-4 py-2 text-sm"
         >
           {text}
         </Link>
