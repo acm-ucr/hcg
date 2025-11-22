@@ -28,9 +28,9 @@ const LogoCarousel = ({ data }: { data: CarouselItem[] }) => {
         className="flex items-center"
         {...logoCarouselAnimation(totalWidth, duration)}
       >
-        {duplicatedData.map(({ name, icon }, idx) => (
+        {duplicatedData.map(({ name, icon }, index) => (
           <div
-            key={idx}
+            key={index}
             className="bg-hcg-white flex w-48 flex-shrink-0 items-center justify-center px-8 py-4"
           >
             <Image

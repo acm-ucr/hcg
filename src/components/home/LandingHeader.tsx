@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import LandingPageLogo from "@/public/groupPhoto.webp";
+import LandingPageLogo from "@/public/groupPhoto.png";
 import Image from "next/image";
 
 const headerAnimation = {
@@ -22,10 +22,13 @@ const LandingHeader = () => {
       />
 
       <div className="text-hcg-white absolute content-center text-center opacity-100">
-        <motion.div className="text-5xl font-bold" {...headerAnimation}>
+        <motion.div
+          className="text-4xl font-bold md:text-6xl"
+          {...headerAnimation}
+        >
           Highlander Consulting Group
         </motion.div>
-        <motion.div {...headerAnimation}>
+        <motion.div {...headerAnimation} className="text-lg md:text-xl">
           UC Riverside's Premier Consulting Organization
         </motion.div>
       </div>
