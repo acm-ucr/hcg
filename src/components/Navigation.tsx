@@ -8,6 +8,7 @@ import { FaBars } from "react-icons/fa";
 import { HiXMark } from "react-icons/hi2";
 import { useState } from "react";
 import { motion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 const fadeIn = (delay = 0) => ({
   initial: { opacity: 0 },
@@ -27,8 +28,9 @@ const Navigation = () => {
 
   const toggleIconVisibility = () => {
     toggleVisibility(!visibility);
-    console.log(visibility);
   };
+
+  const path = usePathname();
 
   return (
     <div>
@@ -43,7 +45,12 @@ const Navigation = () => {
           {navbarLinks.map(({ name, link }, i) => (
             <motion.div {...fadeIn(i * 0.15)} key={i} className="w-max">
               <motion.div {...hoverAnimation}>
-                <Link href={link}>{name}</Link>
+                <Link
+                  href={link}
+                  className={`${path === link && "underline underline-offset-2"}`}
+                >
+                  {name}
+                </Link>
               </motion.div>
             </motion.div>
           ))}
@@ -75,7 +82,7 @@ const Navigation = () => {
               <motion.div {...hoverAnimation} className="inline-block">
                 <Link
                   href={link}
-                  className="text-2xl"
+                  className={`text-2xl ${path === link && "underline underline-offset-2"}`}
                   onClick={toggleIconVisibility}
                 >
                   {name}
