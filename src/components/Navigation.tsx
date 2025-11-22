@@ -28,11 +28,9 @@ const Navigation = () => {
 
   const toggleIconVisibility = () => {
     toggleVisibility(!visibility);
-    console.log(visibility);
   };
 
   const path = usePathname();
-  console.log(path);
 
   return (
     <div>
@@ -49,7 +47,7 @@ const Navigation = () => {
               <motion.div {...hoverAnimation}>
                 <Link
                   href={link}
-                  className={`${path === link ? "underline underline-offset-2" : ""}`}
+                  className={`${path === link && "underline underline-offset-2"}`}
                 >
                   {name}
                 </Link>
