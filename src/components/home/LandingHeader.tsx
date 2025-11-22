@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import LandingPageLogo from "@/public/groupPhoto.webp";
+import LandingPageLogo from "@/public/groupPhoto.png";
 import Image from "next/image";
 
 const headerAnimation = {

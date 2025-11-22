@@ -1,25 +1,24 @@
 "use client";
-import BoardCard from "@/components/board/BoardCard";
-import { boardInfo } from "@/data/BoardData";
 import { motion } from "motion/react";
+import MemberCard from "@/components/MemberCard";
+import { boardInfo } from "@/data/BoardData";
 
-const boardMappingAnimation = (delay = 0) => ({
+const boardMappingAnimation = () => ({
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay },
-  viewport: { once: true },
+  transition: { duration: 0.8 },
 });
 
 const BoardMapping = () => {
   return (
-    <div className="flex flex-row flex-wrap items-center justify-center">
+    <div className="flex flex-row flex-wrap justify-center">
       {boardInfo.map((member, index) => (
         <motion.div
           key={index}
-          {...boardMappingAnimation(index * 0.15)}
-          className="flex w-1/2 justify-center md:w-1/3"
+          {...boardMappingAnimation()}
+          className="w-1/2 md:w-1/3"
         >
-          <BoardCard
+          <MemberCard
             key={index}
             name={member.name}
             role={member.title}

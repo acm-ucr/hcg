@@ -23,7 +23,6 @@ const solutionsAnimation = (delay = 0) => ({
     duration: 0.5,
     delay,
   },
-  viewport: { once: true },
 });
 
 const Solutions = () => {
@@ -41,9 +40,9 @@ const Solutions = () => {
 
   return (
     <>
-      <div className="mx-auto w-5/6 py-8">
+      <div className="mx-auto w-5/6 pb-8">
         <Title title="Solutions" className="mb-8" />
-        <div className="hidden gap-4 md:flex">
+        <div className="mx-auto hidden gap-4 md:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (
             <motion.div key={index} {...solutionsAnimation(index * 0.3)}>
               <SolutionCard
@@ -54,8 +53,11 @@ const Solutions = () => {
             </motion.div>
           ))}
         </div>
-        <div className="flex gap-4 md:hidden">
-          <button onClick={() => carouselApi?.scrollTo(currentIndex - 1)}>
+        <div className="flex justify-center gap-4 md:hidden">
+          <button
+            onClick={() => carouselApi?.scrollTo(currentIndex - 1)}
+            className="cursor-pointer"
+          >
             <Image src={leftArrow} alt="Left Arrow" />
           </button>
           <Carousel
@@ -79,7 +81,10 @@ const Solutions = () => {
               )}
             </CarouselContent>
           </Carousel>
-          <button onClick={() => carouselApi?.scrollTo(currentIndex + 1)}>
+          <button
+            onClick={() => carouselApi?.scrollTo(currentIndex + 1)}
+            className="cursor-pointer"
+          >
             <Image src={rightArrow} alt="Right Arrow" />
           </button>
         </div>
