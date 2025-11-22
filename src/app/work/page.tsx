@@ -1,11 +1,13 @@
 import Header from "@/components/Header";
 import InfoSection from "@/components/InfoSection";
-import Clients from "@/components/work/Clients";
 import Solutions from "@/components/work/Solutions";
 import ContactUs from "@/components/ContactUs";
 
 import OurServicesImage from "@/public/work/ourServices.webp";
 import workHeader from "@/public/work/clientWorkBG.webp";
+
+import { clientCarouselData } from "@/data/ClientCarouselData";
+import Carousel from "@/components/LogoCarousel";
 
 const Work = () => {
   return (
@@ -17,7 +19,7 @@ const Work = () => {
         image={OurServicesImage}
         imageAlt="Our Services"
       />
-      <Clients />
+      <Carousel data={clientCarouselData} />
       <Solutions />
       <ContactUs
         buttonText="Learn More"

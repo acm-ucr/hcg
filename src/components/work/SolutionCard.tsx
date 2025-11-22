@@ -1,3 +1,4 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 
 interface SolutionCardProps {
@@ -16,8 +17,8 @@ const SolutionCard = ({ cardTitle, cardText, imageSrc }: SolutionCardProps) => {
           height={70}
           className="mt-2"
         />
-        <div className="text-2xl font-bold">{cardTitle}</div>
-        <p className="mb-5 text-lg font-thin">{cardText}</p>
+        <div className="text-md font-bold md:text-xl">{cardTitle}</div>
+        <p className="mb-5 text-sm font-thin md:text-lg">{cardText}</p>
       </div>
     </div>
   );

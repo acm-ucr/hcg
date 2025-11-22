@@ -15,8 +15,8 @@ import Nvidia from "@/public/about/logos/Nvidia.webp";
 import Oaktree from "@/public/about/logos/Oaktree.webp";
 import Paramount from "@/public/about/logos/Paramount.webp";
 import Pepsico from "@/public/about/logos/PepsiCo.webp";
-import PWC from "@/public/about/logos/pwc.webp";
-import ServiceNow from "@/public/about/logos/servicenow.webp";
+import PWC from "@/public/about/logos/Pwc.webp";
+import ServiceNow from "@/public/about/logos/Servicenow.webp";
 import Tesla from "@/public/about/logos/Tesla.webp";
 import { StaticImageData } from "next/image";
 
