@@ -24,7 +24,7 @@ const MailingList = () => {
           }
         }}
       />
-      <div className="flex min-h-screen items-center justify-center">
+      <div className="flex items-center justify-center py-8">
         <div className="bg-hcg-gold w-4/5 rounded-2xl p-2">
           <div className="font-hcg-main rounded-2xl border border-white p-10 font-light">
             <div className="mb-10 text-center text-2xl font-bold text-white md:text-5xl">

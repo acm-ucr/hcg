@@ -7,6 +7,9 @@ import ContactUs from "@/components/ContactUs";
 import OurServicesImage from "@/public/work/ourServices.webp";
 import workHeader from "@/public/work/clientWorkBG.webp";
 
+import { clientCarouselData } from "@/data/ClientCarouselData";
+import Carousel from "@/components/LogoCarousel";
+
 const Work = () => {
   return (
     <div>
@@ -18,6 +21,7 @@ const Work = () => {
         imageAlt="Our Services"
       />
       <Clients />
+      <Carousel data={clientCarouselData} />
       <Solutions />
       <ContactUs
         buttonText="Learn More"
