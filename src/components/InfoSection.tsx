@@ -36,7 +36,7 @@ const InfoSection = ({ title, text, image, imageAlt }: InfoSectionProps) => {
             <Title title={title} color={"text-hcg-pastel-brown"} />
           </motion.div>
           <motion.p
-            className="flex items-center justify-center text-center text-sm font-normal sm:text-lg md:w-3/4 md:text-left md:text-xl"
+            className="text-md flex items-center justify-center text-center font-normal md:w-3/4 md:text-left md:text-xl"
             {...infoSectionTextAnimation}
           >
             {text}

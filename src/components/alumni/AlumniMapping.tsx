@@ -16,7 +16,7 @@ const AlumniMapping = () => {
         <motion.div
           key={index}
           {...alumniMappingAnimation()}
-          className="w-1/2 md:w-1/3"
+          className="w-2/3 sm:w-1/2 md:w-1/3"
         >
           <MemberCard
             key={index}

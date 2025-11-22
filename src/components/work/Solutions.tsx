@@ -40,7 +40,7 @@ const Solutions = () => {
 
   return (
     <>
-      <div className="mx-auto w-5/6 pb-8">
+      <div className="mx-auto w-9/10 pb-8 md:w-5/6">
         <Title title="Solutions" className="mb-8" />
         <div className="mx-auto hidden gap-4 md:flex">
           {solutionsInfos.map(({ cardTitle, cardText, imageSrc }, index) => (

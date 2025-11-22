@@ -17,7 +17,7 @@ const SolutionCard = ({ cardTitle, cardText, imageSrc }: SolutionCardProps) => {
           height={70}
           className="mt-2"
         />
-        <div className="text-lg font-bold md:text-2xl">{cardTitle}</div>
+        <div className="text-md font-bold md:text-xl">{cardTitle}</div>
         <p className="mb-5 text-sm font-thin md:text-lg">{cardText}</p>
       </div>
     </div>

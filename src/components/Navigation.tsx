@@ -37,13 +37,17 @@ const Navigation = () => {
       <div className="from-hcg-black to-hcg-gold fixed inset-x-0 top-0 z-50 flex h-[15vh] items-center justify-between bg-linear-to-r p-8">
         <div className="sticky flex w-full">
           <Link href="/">
-            <Image src={SmallLogo} alt="SmallLogo" className="h-18 w-auto" />
+            <Image
+              src={SmallLogo}
+              alt="SmallLogo"
+              className="h-14 w-auto md:h-18"
+            />
           </Link>
         </div>
 
         <div className="text-hcg-white hidden h-auto items-center gap-8 pr-8 text-xl md:flex">
-          {navbarLinks.map(({ name, link }, i) => (
-            <motion.div {...fadeIn(i * 0.15)} key={i} className="w-max">
+          {navbarLinks.map(({ name, link }, index) => (
+            <motion.div {...fadeIn(index * 0.15)} key={index} className="w-max">
               <motion.div {...hoverAnimation}>
                 <Link
                   href={link}
