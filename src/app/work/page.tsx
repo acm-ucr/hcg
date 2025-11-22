@@ -4,7 +4,7 @@ import Solutions from "@/components/work/Solutions";
 import ContactUs from "@/components/ContactUs";
 
 import OurServicesImage from "@/public/work/ourServices.webp";
-import workHeader from "@/public/work/clientWorkBG.webp";
+import workHeader from "@/public/work/clientWorkBG.png";
 
 import { clientCarouselData } from "@/data/ClientCarouselData";
 import Carousel from "@/components/LogoCarousel";
