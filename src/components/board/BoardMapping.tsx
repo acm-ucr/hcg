@@ -3,10 +3,10 @@ import { motion } from "motion/react";
 import MemberCard from "@/components/MemberCard";
 import { boardInfo } from "@/data/BoardData";
 
-const boardMappingAnimation = (delay = 0) => ({
+const boardMappingAnimation = () => ({
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay },
+  transition: { duration: 0.8 },
 });
 
 const BoardMapping = () => {
@@ -15,7 +15,7 @@ const BoardMapping = () => {
       {boardInfo.map((member, index) => (
         <motion.div
           key={index}
-          {...boardMappingAnimation(index * 0.15)}
+          {...boardMappingAnimation()}
           className="w-1/2 md:w-1/3"
         >
           <MemberCard

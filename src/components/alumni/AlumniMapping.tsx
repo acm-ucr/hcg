@@ -3,10 +3,10 @@ import { motion } from "motion/react";
 import MemberCard from "@/components/MemberCard";
 import { AlumniData } from "@/data/AlumniData";
 
-const alumniMappingAnimation = (delay = 0) => ({
+const alumniMappingAnimation = () => ({
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, delay },
+  transition: { duration: 0.8 },
 });
 
 const AlumniMapping = () => {
@@ -15,7 +15,7 @@ const AlumniMapping = () => {
       {AlumniData.map((member, index) => (
         <motion.div
           key={index}
-          {...alumniMappingAnimation(index * 0.15)}
+          {...alumniMappingAnimation()}
           className="w-1/2 md:w-1/3"
         >
           <MemberCard
