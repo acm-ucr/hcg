@@ -82,7 +82,7 @@ const Navigation = () => {
               <motion.div {...hoverAnimation} className="inline-block">
                 <Link
                   href={link}
-                  className={`text-2xl ${path === link ? "underline underline-offset-2" : ""}`}
+                  className={`text-2xl ${path === link && "underline underline-offset-2"}`}
                   onClick={toggleIconVisibility}
                 >
                   {name}
