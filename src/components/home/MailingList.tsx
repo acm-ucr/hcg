@@ -53,7 +53,7 @@ const MailingList = () => {
                       required
                     />
                   </div>
-                  <div className="hidden flex-1 md:block">
+                  <div className="flex-1">
                     <div className="mb-2 text-lg text-white">Last Name</div>
                     <input
                       className="w-full bg-white p-3 focus:outline-none"
