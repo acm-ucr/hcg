@@ -9,10 +9,10 @@ interface FooterLink {
 export const footerLinks: FooterLink[] = [
   {
     icon: FaInstagram,
-    url: "",
+    url: "https://www.instagram.com/ucrhcg/",
   },
   {
     icon: FaLinkedinIn,
-    url: "",
+    url: "https://www.linkedin.com/company/highlander-consulting-group-hcg/",
   },
 ];

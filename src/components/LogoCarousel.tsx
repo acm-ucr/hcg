@@ -8,6 +8,15 @@ type CarouselItem = {
   icon: StaticImageData;
 };
 
+const logoCarouselAnimation = (totalWidth = 0, duration = 0) => ({
+  animate: { x: [0, -totalWidth] },
+  transition: {
+    ease: "linear" as const,
+    duration,
+    repeat: Infinity,
+  },
+});
+
 const LogoCarousel = ({ data }: { data: CarouselItem[] }) => {
   const duplicatedData = [...data, ...data, ...data, ...data];
   const totalWidth = data.length * 192;
@@ -17,12 +26,7 @@ const LogoCarousel = ({ data }: { data: CarouselItem[] }) => {
     <div className="bg-hcg-white w-full overflow-hidden">
       <motion.div
         className="flex items-center"
-        animate={{ x: [0, -totalWidth] }}
-        transition={{
-          duration,
-          ease: "linear",
-          repeat: Infinity,
-        }}
+        {...logoCarouselAnimation(totalWidth, duration)}
       >
         {duplicatedData.map(({ name, icon }, idx) => (
           <div

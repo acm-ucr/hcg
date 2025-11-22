@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import InfoSection from "@/components/InfoSection";
-import Clients from "@/components/work/Clients";
 import Solutions from "@/components/work/Solutions";
 import ContactUs from "@/components/ContactUs";
 
@@ -20,7 +19,6 @@ const Work = () => {
         image={OurServicesImage}
         imageAlt="Our Services"
       />
-      <Clients />
       <Carousel data={clientCarouselData} />
       <Solutions />
       <ContactUs
